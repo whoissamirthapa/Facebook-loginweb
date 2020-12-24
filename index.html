@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <title>Facebook - log in or sign up</title>
+    <link rel="stylesheet" href="facebookloginstyle.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!--include jQuery :) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+</head>
+<body>
+    <!-- Modal Signup -->
+    <div id="signupmodal" class="modal">
+        <h1><strong>Sign Up</strong></h1>
+        <div class="itsqk">It’s quick and easy.</div>
+        <div class="namesec">
+            <div class="firstnam name"><input type="text" placeholder="Last Name" required /></div>
+            <div class="lastnam name"><input type="text" placeholder="First Name" required /></div>
+        </div>
+        <div class="phoneoremail name"><input type="text" placeholder="Mobile number or email" required /></div>
+        <div class="password name"><input type="Password" placeholder="Password" required /></div>
+        <div class="birthdayinfohead">
+            Birthday <i class="fas fa-question-circle"></i>
+        </div>
+        <div class="birthday">
+            <div class="bmonth">
+                <select id="month" name="month" form="monthform">
+                    <option value="0">Month</option>
+                    <option value="1">January</option>
+                    <option value="2">Fabruary</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+            </select>
+            </div>
+            <div class="day">
+                <select id="day" name="day" form="dayform">
+                    <option value="0">Day</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+            </select>
+            </div>
+            <div class="year">
+                <select name="year" id="year">
+                    <option value="0">Year</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                    <option value="2014">2014</option>
+                    <option value="2013">2013</option>
+                    <option value="2012">2012</option>
+                    <option value="2011">2011</option>
+                    <option value="2010">2010</option>
+                    <option value="2009">2009</option>
+                    <option value="2008">2008</option>
+                    <option value="2007">2007</option>
+                    <option value="2006">2006</option>
+                    <option value="2005">2005</option>
+                    <option value="2004">2004</option>
+                    <option value="2003">2003</option>
+                    <option value="2002">2002</option>
+                    <option value="2001">2001</option>
+                    <option value="2000">2000</option>
+                    <option value="1999">1999</option>
+                    <option value="1998">1998</option>
+                    <option value="1997">1997</option>
+            </select>
+            </div>
+        </div> 
+        <div class="genderinfo">
+            Gender <i class="fas fa-question-circle"></i>
+        </div>
+        <form>
+            <div class="gendercontainer">
+                <div class="Female">
+                    <label for="Female">Female</label>
+                    <input type="radio" name="gender" id="Female" value="Female">
+                </div>
+                <div class="Male lft">
+                    <label for="Male">Male</label>
+                    <input type="radio" name="gender" id="Male" value="Male">
+                </div>
+                <div class="Custom lft">
+                    <label for="Custom">Custom</label>
+                    <input type="radio" name="gender" id="Custom" value="Custom">
+                </div>
+            </div> 
+        </form>
+        <div class="footer">
+            By clicking Sign Up, you agree to our <a href="#">Terms</a>, <a href="#">Data Policy</a> and <a href="#">Cookies Policy</a>. You may receive SMS Notifications from us and can opt out any time.
+        </div>
+        <div class="sub_btn">
+            <a href="https://www.facebook.com">
+                <button type="submit">
+                    <strong>Sign Up</strong>
+                </button>
+            </a>
+        </div>
+        
+    </div>
+    
+    <!-- Sign In -->
+    <div class="container">
+        <div class="facebook-user">
+            <div>
+                <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="Facebook">
+            </div>
+            <div class="recentlogin">
+                <span>Recent Logins</span><br>
+                Click your picture or add an account.
+            </div>
+            <div class="userlogincontainer profileseener">
+                <div class="user">
+                    <div class="userimage">
+                        <img src="https://i.pinimg.com/564x/d9/56/9b/d9569bbed4393e2ceb1af7ba64fdf86a.jpg" alt="user_image">
+                    </div>
+                    <div class="name  srnm">Samir</div>
+                </div>
+                <div class="user usrad">
+                    <div class="useradd">
+                        <i class="fas fa-plus-circle"></i>
+                    </div>
+                    <div class="useraddname">
+                       Add Account
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mainloginpart">
+            <div class="loginpart">
+                <div class="mainlogincontainer">
+                    <div class="inputdata">
+                        <input type="text" name="usermailorphone" placeholder="Email address or phone number" required>
+                    </div>
+                    <div class="inputdata">
+                        <input type="password" name="password" id="password" placeholder="Password" required>
+                    </div>
+                    <div class="inputdata inptsbtn">
+                        <a href="https://www.facebook.com"><button type="submit"><strong>Log In</strong></button></a>
+                    </div>
+                    <div class="forgottenpw"><a href="#">Forgotten Passoword?</a></div>
+                    <a href="#signupmodal" rel="modal:open"><div class="createaccountfromfb"><button><strong>Create New Account</strong></button></div></a>
+                </div>
+            </div>
+            
+            <div class="createpageforbuss"><a><strong>Create a Page</strong></a> for a celebrity, band or business.</div>
+        </div>
+        
+        
+
+    </div>
+</body>
+</html>
